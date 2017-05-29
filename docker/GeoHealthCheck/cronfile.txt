@@ -1,0 +1,5 @@
+SHELL=/bin/bash
+# * * * * *   echo "Hello $(date)" >>/var/log/cron.log 2>&1
+# * * * * *   /cron-jobs-hourly.sh > /var/log/ghc.log 2>&1
+@hourly /cron-jobs-hourly.sh > /var/log/ghc-hourly.log 2>&1
+@daily /cron-jobs-daily.sh > /var/log/ghc-daily.log 2>&1
